@@ -1,0 +1,68 @@
+{
+  "name": "liquid_neutron",
+  "version": "0.2.0",
+  "description": "This application operates the backend.",
+  "main": "app.js",
+  "dependencies": {
+    "basic-auth": "^1.0.4",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.0",
+    "csv": "^1.1.0",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "handlebars": "^4.0.5",
+    "jsonwebtoken": "^7.0.0",
+    "lodash": "4.16.4",
+    "nodemailer": "2.6.4",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-localapikey": "0.0.3",
+    "pg": "6.1.0",
+    "pg-hstore": "~2.3.2",
+    "request": "2.76.0",
+    "request-promise-native": "^1.0.3",
+    "sequelize": "3.24.6",
+    "twilio": "^2.11.0",
+    "winston": "^2.2.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"nodemon --debug index.js\" \"node-inspector\"",
+    "test": "concurrently \"node --debug-brk scripts/getFingerprint.js\" \"node-inspector\"",
+    "start": "node index.js",
+    "eslint": "eslint src/**",
+    "syncDatabase": "node scripts/syncDatabase.js",
+    "seedDatabase": "node scripts/seedDatabase.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahmanek/LiquidNeutron.git"
+  },
+  "author": "Ebad Rahman <rahmanek@gmail.com>",
+  "license": "SEE LICENSE IN license",
+  "bugs": {
+    "url": "https://github.com/rahmanek/LiquidNeutron/issues"
+  },
+  "homepage": "https://github.com/rahmanek/LiquidNeutron#readme",
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true
+    },
+    "globals": {
+      "Promise": true
+    }
+  },
+  "engines": {
+    "node": "6.9.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "concurrently": "3.1.0",
+    "eslint": "3.8.1",
+    "mocha": "3.1.2",
+    "node-inspector": "^0.12.8",
+    "nodemon": "1.11.0",
+    "supertest": "2.0.1"
+  }
+}
